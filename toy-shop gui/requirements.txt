@@ -1,0 +1,8 @@
+pip install Pillow
+
+----------------------
+
+Feature 1:
+Admin Username: admin
+Admin Password: python
+
