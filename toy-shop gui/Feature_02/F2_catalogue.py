@@ -22,6 +22,7 @@ class F2Feature:
         # ========================================= FONTS ==============================================================
         fontStyle_4 = font.Font(family="Calibri", weight='bold', size=16)
         txt_font = font.Font(family='Calibri', size='16')
+        
         # ==============================================================================================================
         # ======================================== FUNCTIONS ===========================================================
 
@@ -63,11 +64,14 @@ class F2Feature:
                 my_list.insert(END, item)
 
         def fillout(event):
-            search.delete(0, END)  # Delete whatever is there in Entry box
-            search.insert(0, my_list.get(ACTIVE))  # Delete whatever is there in Entry box
+            search.delete(0, END)                    # Delete whatever is there in Entry box
+            search.insert(0, my_list.get(ACTIVE))    # Delete whatever is there in Entry box
 
-        def check(event):  # function to check Search bar vs Listbox
-            typed = search.get()  # grab what was typed
+        def check(event):  
+            """
+            Check Search bar vs Listbox
+            """
+            typed = search.get()                     # grab what was typed
             if typed == '':
                 data = toys
             else:
@@ -79,18 +83,21 @@ class F2Feature:
             update(data)
 
         def close_tab():
-            self.notebook.hide(tab_id=3)  # Hides the ( Toy ) tab
-            self.notebook.hide(tab_id=4)  # Hides the ( Write A Review ) tab
-            self.notebook.hide(tab_id=5)  # Hides the ( See All Reviews ) tab
+            self.notebook.hide(tab_id=3)       # Hides the ( Toy ) tab
+            self.notebook.hide(tab_id=4)       # Hides the ( Write A Review ) tab
+            self.notebook.hide(tab_id=5)       # Hides the ( See All Reviews ) tab
             self.notebook.select(tab_id=0)
 
         def write_review():
-            self.notebook.select(tab_id=4)  # Show up ( Write A Review ) tab
+            self.notebook.select(tab_id=4)     # Shows up ( Write A Review ) tab
 
         def see_reviews():
-            self.notebook.select(tab_id=5)  # Show up ( See All Reviews ) tab
+            self.notebook.select(tab_id=5)     # Shows up ( See All Reviews ) tab
 
-        def bolder():  # function to bold the selected text
+        def bolder():  
+             """
+             Bold the selected text
+             """   
             try:
                 bold_font = font.Font(text, text.cget("font"))
                 bold_font.configure(weight="bold")
@@ -103,7 +110,10 @@ class F2Feature:
             except TclError:
                 msg.showerror('Alert', 'Text needs to be selected')
 
-        def italics():  # function to italicise the selected text
+        def italics():  
+            """
+            Italicise the selected text
+            """
             try:
                 italics_font = font.Font(text, text.cget("font"))
                 italics_font.configure(slant="italic")
@@ -116,7 +126,10 @@ class F2Feature:
             except TclError:
                 msg.showerror('Alert', 'Text needs to be selected')
 
-        def change_color():  # function to change color of selected text
+        def change_color():  
+            """
+            Change color of selected text
+            """
             try:
                 my_color = colorchooser.askcolor()[1]
                 if my_color:
@@ -153,7 +166,7 @@ class F2Feature:
                 msg.showinfo('Successful!!', 'Thank you so much!')
                 self.customer_name.delete(0, END)
                 combo.delete(0, END)
-                text.delete(1.0, END)  # to delete the final text
+                text.delete(1.0, END)    # to delete the final text
 
         # ==============================================================================================================
         # ================================ SEARCH BAR & LISTBOX (with toys) ============================================
@@ -164,15 +177,15 @@ class F2Feature:
         search = tk.Entry(self.toyDisplay, width=16, font=('', 22), relief=GROOVE)
         search.place(x=20, y=100)
 
-        search.focus()  # automatically get the cursor to the entry_search
-        search.bind('<Return>')  # run function when in `entry`, you press `ENTER` on keyboard
+        search.focus()                                     # automatically get the cursor to the entry_search
+        search.bind('<Return>')                            # run function when in `entry`, you press `ENTER` on keyboard
 
         # Search Button
         search_button = tk.Button(self.toyDisplay, text='Search', font=('', 15), width=10, command=searchitem)
         search_button.place(x=80, y=150)
 
-        frame = Frame(self.toyDisplay)  # Create a frame
-        my_scrollbar = Scrollbar(frame, orient=VERTICAL)  # Creating a scrollbar
+        frame = Frame(self.toyDisplay)                     # Create a frame
+        my_scrollbar = Scrollbar(frame, orient=VERTICAL)   # Creating a scrollbar
 
         list_label = Label(frame, text='List of all toys...', fg='grey', font=('', 16))
         list_label.pack(side=TOP)
@@ -181,7 +194,7 @@ class F2Feature:
         my_list = Listbox(frame, width=24, font=('', 16), yscrollcommand=my_scrollbar.set,
                           cursor='top_left_arrow', relief=GROOVE)
 
-        my_scrollbar.config(command=my_list.yview) # configuring the scrollbar to the list box
+        my_scrollbar.config(command=my_list.yview)          # configuring the scrollbar to the list box
         my_scrollbar.pack(side=RIGHT, fill=Y, pady=5)
         frame.place(x=20, y=250)
         my_list.pack(side=BOTTOM, pady=5)
@@ -193,12 +206,12 @@ class F2Feature:
             'SnapCircuits'
         ]
 
-        toys = sorted(toys_list)  # List of Toys and Categories
+        toys = sorted(toys_list)                          # List of Toys and Categories
 
-        update(toys)  # Add the toys to our list
+        update(toys)                                      # Add the toys to our list
 
-        my_list.bind("<<ListboxSelect>>", fillout)  # Create binding on the listbox onclick
-        search.bind("<KeyRelease>", check)  # Create binding on the Entry box
+        my_list.bind("<<ListboxSelect>>", fillout)        # Create binding on the listbox onclick
+        search.bind("<KeyRelease>", check)                # Create binding on the Entry box
 
         Label(self.toyDisplay, text='Use the arrow keys ⬆️ ⬇️').place(x=55, y=500)
 
@@ -206,12 +219,12 @@ class F2Feature:
 
         self.notebook = ttk.Notebook(self.master)
 
-        frameOne = XScrollbar(self.master)  # Board Category
-        frameTwo = XScrollbar(self.master)  # Animal Category
-        frameThree = XScrollbar(self.master)  # Electronic Category
-        framefortoy = Frame(self.master)  # Toy
-        frameFour = Frame(self.master)  # Write A Review
-        frameFive = YScrollbar(self.master)  # See all reviews
+        frameOne = XScrollbar(self.master)                # Board Category
+        frameTwo = XScrollbar(self.master)                # Animal Category
+        frameThree = XScrollbar(self.master)              # Electronic Category
+        framefortoy = Frame(self.master)                  # Toy
+        frameFour = Frame(self.master)                    # Write A Review
+        frameFive = YScrollbar(self.master)               # See all reviews
 
         self.notebook.add(frameOne, text='Board')
         self.notebook.add(frameTwo, text='Animal')
