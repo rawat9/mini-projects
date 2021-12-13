@@ -1,0 +1,205 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -0.1275,51.5072 ]
+    },
+    "properties": {
+    "city":"London"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.9025,52.48 ]
+    },
+    "properties": {
+    "city":"Birmingham"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -2.2453,53.4794 ]
+    },
+    "properties": {
+    "city":"Manchester"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.5492,53.7997 ]
+    },
+    "properties": {
+    "city":"Leeds"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.6578,55.0077 ]
+    },
+    "properties": {
+    "city":"Newcastle"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.12,52.6736 ]
+    },
+    "properties": {
+    "city":"Birstall"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -4.2514,55.8609 ]
+    },
+    "properties": {
+    "city":"Glasgow"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -2.9833,53.4 ]
+    },
+    "properties": {
+    "city":"Liverpool"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.0872,50.8058 ]
+    },
+    "properties": {
+    "city":"Portsmouth"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.4,50.9 ]
+    },
+    "properties": {
+    "city":"Southampton"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.15,52.95 ]
+    },
+    "properties": {
+    "city":"Nottingham"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -2.5833,51.45 ]
+    },
+    "properties": {
+    "city":"Bristol"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.4667,53.3833 ]
+    },
+    "properties": {
+    "city":"Sheffield"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -0.3325,53.7444 ]
+    },
+    "properties": {
+    "city":"Kingston upon Hull"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.1333,52.6333 ]
+    },
+    "properties": {
+    "city":"Leicester"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -3.189,55.953 ]
+    },
+    "properties": {
+    "city":"Edinburgh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -3.1833,51.4833 ]
+    },
+    "properties": {
+    "city":"Caerdydd"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -2.1833,53 ]
+    },
+    "properties": {
+    "city":"Stoke-on-Trent"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.5106,52.4081 ]
+    },
+    "properties": {
+    "city":"Coventry"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -0.9731,51.4542 ]
+    },
+    "properties": {
+    "city":"Reading"
+    }
+  }
+]
+}
