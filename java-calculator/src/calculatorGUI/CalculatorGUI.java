@@ -24,6 +24,7 @@ public class CalculatorGUI extends JFrame implements ActionListener {
         frame.setSize(300, 430);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setResizable(false);
+        frame.setLocationRelativeTo(null);
         frame.setLayout(null);
 
         textField = new JTextField();
